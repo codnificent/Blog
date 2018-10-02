@@ -18,7 +18,7 @@ Hello there, Welcome! This website is all about sharing information on web devel
 
 The aim of the website is to help us(developers and designers). Use the content of this site to your own benefit and the benefits of others. 
 
-<img src="/static/image-of-me.jpg" alt="About me">
+<img src="/static/mobile-web.jpg" alt="About me">
 
 ### About me
 

@@ -21,7 +21,7 @@ disqus.shortname: https-mordernweb-com
 description: # this means to ignore newlines until "baseurl:"
   Web development tips for developing modern websites
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "mordernweb.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mordernweb.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: aguchibeking
 github_username:  codnificent
 facebook_username: aguchibe
