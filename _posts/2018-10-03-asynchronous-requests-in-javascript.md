@@ -10,7 +10,7 @@ categories: javascript
  methods. But, before we go further, we need to understand what asynchronous
  request means.
 
-### What we'll cover -
+#### What we'll cover -
 
 * The meaning of Asynchronous Request
 * How to make async request using the XMLHttpRequest object
@@ -36,9 +36,9 @@ An important fact we should note is that XML is a file type that is originally s
 
 The XMLHttpRequest is like other JavaScript objects like the document object. The XMLHttpRequest object does not only support XML file types. It supports other file types like JSON, images etc
 
-Also, just like other JavaScript objects, XHR has a number of methods. The most important of them all being the _.open()_ method, which is used to initialize the request. It goes with some parameters, the most important being the first two - the _HTTP method_ and the _request URL_
+Also, just like other JavaScript objects, XHR has a number of methods. The most important of them all being the `.open()` method, which is used to initialize the request. It goes with some parameters, the most important being the first two - the _HTTP method_ and the _request URL_
 
-The XHR object has other methods like the `_.onload_` , the `_.onerror_`, the `_.send_`method etc.
+The XHR object has other methods like the `.onload` , the `.onerror`, the `.send`method etc.
 
 > Example code:
 
@@ -52,7 +52,7 @@ cakeRequest.send();
 
 Now it is believed that the idea is clear. Should you be interested in knowing more about those methods used above, visit the MDN's doc on [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest).
 
-It's time to talk about the second one. The use of the `**$.ajax()**` from jQuery to make asynchronous requests. This method is so popular because jQuery itself is a library that makes developer's life easier.
+It's time to talk about the second one. The use of the `$.ajax()` from jQuery to make asynchronous requests. This method is so popular because jQuery itself is a library that makes developer's life easier.
 
 With this approach, shorter code is required in order to make the request. One thing we should learn here is that even though the request is made using a library, the **XHR** is still used under the hood of the library.
 
@@ -70,9 +70,9 @@ You can see the use of XHR object as doing something by yourself. Then, the use 
  }
 ```
 
-Now, we all can see the using the `**$.ajax()**` makes the code shorter and simpler.
+Now, we all can see the using the `$.ajax()` makes the code shorter and simpler.
 
-The _.done()_ is used to do something with the result of the request (in this case, the response)
+The .done() is used to do something with the result of the request (in this case, the response)
 
 Learn more about the **[$.ajax](http://api.jquery.com/jquery.ajax/)** request
 
@@ -80,7 +80,7 @@ Everything is looking cool so far. Now it's time to talk about the **Fetch API**
 
 The Fetch API  is the modern way of making async requests in JavaScript. There's a lot to it because of how awesome it is.
 
-### Some features of the Fetch API
+#### Some features of the Fetch API
 
 * It doesn't require HTTPS
 * It supports CORS(Cross Origin Resource Sharing) operation
@@ -104,7 +104,7 @@ fetch('https://mordernweb.com')
 });
 ```
 
-The `_.then()_` is the 'promise based' we talked about. The `_.cache()_` is used to handle error if the request wasn't successful.
+The `.then()` is the 'promise based' we talked about. The `.cache()` is used to handle error if the request wasn't successful.
 
 To learn more about Fetch API go to, **[Working with the Fetch API](https://developers.google.com/web/ilt/pwa/working-with-the-fetch-api)**. Sure enough, you would see how awesome the API is.
 
