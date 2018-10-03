@@ -184,15 +184,27 @@
 }
 .name-input{
   height: 20px;
-  padding: 6px;
+  padding: 12px;
+  border-radius: 30px;
+  background-color: #eee;
+  border: none;
+  width: 90%;
 }
 .email-input{
   height: 20px;
-  padding: 6px;
+  padding: 12px;
+  border-radius: 30px;
+  background-color: #eee;
+  border: none;
+  width: 90%;
 }
 .user-message{
-  padding: 6px;
-  max-width: 800px;
+  padding: 12px;
+  width: 90%;
+  margin-top: 12px;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
 }
 .button{
   text-align: center;

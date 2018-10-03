@@ -19,7 +19,7 @@ permalink: /contact/
 
 <!-- Contact -->
 <div class="contact-form">
-  <h4>Get in touch through email</h4>
+  <h3>Get in touch through email</h3>
  
 
  <form name="contact" method="POST" netlify-honeypot="bot-field" netlify>
@@ -27,28 +27,17 @@ permalink: /contact/
      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
    </p>
    <div class="user-details">
-         <!-- Name -->
-     <div >
-       <fieldset>
+    <label for="name">Name</label>
       <input type="text" id="name" name="name" placeholder="Enter your name.." required="true" class="name-input">
-          <label for="name">Name</label>
-       </fieldset>
-     </div>
-         <!-- Email -->
-     <div >
-       <fieldset>
+      <br>
+      <br>
+      <label for="email">Email</label>
       <input type="email" name="email" id="email" placeholder="Enter your email.." required="true" class="email-input">
-         <label for="email">Email</label>
-       </fieldset>
-     </div>
+      <br>
+      <br>
    </div>
-    
-   <!-- Message -->
-   <fieldset>
-     <textarea name="message" placeholder="Type your message.." rows="8" cols="80" id="message" class="user-message"></textarea>
-     <label for="message">Your message</label>
-   </fieldset>
-       <!-- Button -->
+   <label for="message">Message</label>
+   <textarea name="message" placeholder="Type your message.." rows="8" cols="80" id="message" class="user-message"></textarea>
    <div class="button">
       <button type="submit" class="submit-button">Submit</button>
    </div>
