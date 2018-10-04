@@ -27,4 +27,4 @@ I'm a student of computer science. I've been working with the web for a while no
 The integrity of what I share to the world matters a lot. So, there's nothing to hide about myself. If you wish to know more about me, click any of the links in the footer section. Or,perhaps you could just contact me instead.
 
 #### Thank you for visiting my little world
-<a href="contact">Contact Me Now</a>
+<a href="/contact">Contact Me Now</a>
