@@ -21,5 +21,6 @@ If you wish to get my service, just contact me and I'll try my best to solve the
 
 #### Thank you for visiting...
 
+<a href="/contact">Contact Me Now</a>
 
 
