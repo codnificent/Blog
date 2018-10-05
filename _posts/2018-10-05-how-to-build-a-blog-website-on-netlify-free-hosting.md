@@ -24,7 +24,7 @@ Don't get me wrong. I'm not saying that you're going to build a theme from scrat
 
 With those being said, let's get into the main thing. In this guide, I'm going to show you how I built my blog with Jekyll static site generator.
 
-Jekyll is a very popular static site generator. There are other static site generators for difference purposes. If you want a detailed list of them and the number of stars they've got on GitHub, check out this [site](https://www.staticgen.com/)
+Jekyll is a very popular static site generator. There are other static site generators for different purposes. If you want a detailed list of them and the number of stars they've got on GitHub, check out this [site](https://www.staticgen.com/)
 
 In order to work with jekyll locally, you need to install Ruby, if you're using windows machine.
 
@@ -41,23 +41,23 @@ For Linux users, run this command in the terminal `ruby -v`. This would print ou
 * It's easy! Just press 1 and hit enter to install first package
 * Press 2 and hit enter to install the second one ... You get the idea.
 * When everything is installed, open another terminal and run, `ruby -v`
-* You should also run `gem -v`to make sure that that gem is installed.
+* You should also run `gem -v`to make sure that gem is installed.
 
-You can co-relate gem to npm. A package manager in the ruby world. Visit this [site](https://jekyllrb.com/docs/ruby-101/) for more info.
+You can correlate gem to npm. A package manager in the ruby world. Visit this [site](https://jekyllrb.com/docs/ruby-101/) for more info.
 
 When you're sure that ruby and gem are installed, you can now run `jekyll new <your site's name>`. This will create a directory in the path you ran the command. 
 
-There's one more thing that you need to install. A bundler. Run this command; `gem install bundler`. When this is done, run this `bundle install` to install the gems(see 'gems' as packages), then `bundle exec jekyll serve` to build your site.
+There's one more thing that you need to install. A bundler. Run this command; `gem install bundler`. When this is done, run this `bundle install` to install the gems(you can see 'gems' as packages), then `bundle exec jekyll serve` to build your site.
 
 Now you're good to go! Just run `jekyll serve`. And that's it! You should be able to see your site live at localhost:4000. This site uses a theme called minima - a very simple theme. But, if you wish, you can use another theme of your choice. Visit [Jekyll themes](http://jekyllthemes.org/) to choose a theme you like.
 
 ![Jekyll Themes](/static/uploads/jekyllthemes.png)
 
-Okay, now is the perfect time to bend your new site to your needs. One thing you need to know at this point is that for you to be able to edit your theme perfectly, you need to bring in the whole files for the theme. 
+Okay, now is the perfect time to bend your new site to your needs. One thing you need to know at this point is this, for you to be able to edit your theme perfectly, you need to bring in some other files for the theme. 
 
 Run this command `bundle show minima`. The 'minima' is the theme's name, you can put the name of the theme you're using.
 
-Hey! if you're having troubles with any part of the installation processes, the [jekyll docs}(https://jekyllrb.com/docs/) might help.
+Hey! if you're having troubles with any part of the installation processes, the [jekyll docs](https://jekyllrb.com/docs/) might help.
 
 When you run `bundle show <theme name>`, you will see the directory where the files for your theme are located. Just go in there and grab the files that you need.
 
@@ -65,8 +65,8 @@ Example of these files you might need to put into your working folder are: the `
 
 These files are where you basically need to make all your changes. Don't edit the `_site` folder. That's where your final site get bundled into. You have two configuration files you can edit, the `gemfile`, and the `_config.yml` file.
 
->Important tip!
-Anytime you make a change in the `_config.yml` file, make sure to restart the server with `jekyll serve`.
+> Important tip!
+> Anytime you make a change in the `_config.yml` file, make sure to restart the server with `jekyll serve`.
 
 You got that? Perfect! Simple stuff...
 
@@ -77,7 +77,6 @@ These new folder is for the hosting service and the CMS - Netlify CMS.
 
 Before you could integrate your site with Netlify, your site need to be hosted on a git platform. GitHub is a perfect choice.
 
-
 The final result of all these processes is that you've got yourself a nice blog. Share contents as much as you like. 
 
 That's it guys! Thanks for your time and congratulations for making it this far.
@@ -85,4 +84,3 @@ If you get stuck at any point, I might help. Just drop the problem in the commen
 Enjoy!
 
 Read about [Asynchronous request in javascript](https://mordernweb.com/javascript/2018/10/03/asynchronous-requests-in-javascript.html)
-
