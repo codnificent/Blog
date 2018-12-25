@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Frijole');
+
 /**
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
-
+  background-color: #f50057;
+  width: 100%;
   // Positioning context for the mobile navigation icon
   position: relative;
 }
@@ -14,21 +15,20 @@
   @include relative-font-size(1.625);
   font-weight: 700;
   line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: 1px;
   margin-bottom: 0;
   float: left;
-  color: #34495e;
+  color: #fff;
+  font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: #f1f1f1;
   }
 }
 
 .site-nav {
   float: right;
-  font-size: 20px;
-  line-height: $base-line-height * $base-font-size * 2.5;
+  line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
       display: none;
@@ -39,9 +39,16 @@
   }
 
   .page-link {
-    color: #34495e;;
+    color: #fff;
     line-height: $base-line-height;
+    font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
 
+    &,
+    &:visited {
+      color: #f1f1f1;
+    }
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
@@ -52,10 +59,8 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-    text-align: right;
+    background-color: #f50057;
+    border: 1px solid #fff;
 
     label[for="nav-trigger"] {
       display: block;
@@ -76,7 +81,7 @@
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: #fff;
       }
     }
 
@@ -102,15 +107,122 @@
   }
 }
 
+.intro{
+  color: white;
+  text-align: center;
+  background: linear-gradient(
+    rgba(20, 20, 20, 0.6),
+    rgba(20, 20, 20, 0.6)),
+    url("/static/fitness-dopamine-large.jpg");
+  padding: 120px 0;
+  margin-top: 0px;
+  p{
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 33px;
+  }
+}
+.promo-link{
+  border: 1px solid #f50057;
+  background-color: rgba(220, 00, 67, .4);
+  max-width: 150px;
+  margin: auto;
+  padding: 3px 2px;
+  color: #fff;
+
+  a{
+  color: #fff;
+  }
+}
+.newsletter{
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.newsletter-email{
+  outline: none;
+  background-color: #34495e;
+  padding: 6px;
+  height: 20px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+}
+.newsletter-submit{
+  background-color:#f50057;
+  border: none;
+  font-size: 20px;
+  padding: 3px 6px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  margin-top: 22px;
+}
+
+.sub-heading{
+  text-align: justify;
+}
+
+.post-item{
+  box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+  padding: 0px 10px;
+  max-width: 100%;
+  color: #34495e;
+}
+.post-image{
+  padding-bottom: 12px;
+  padding-top: 10px;
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+}
+h1{
+  font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+h2{
+  font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 30px;
+}
+h3{
+  font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+h4{
+  font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+}
+h5{
+  font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+}
+h6{
+  font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
 
 
 /**
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid  #f50057;
+  border-bottom: 1px solid  #f50057;
   padding: $spacing-unit 0;
-  background-color: #fff;
 }
 
 .footer-heading {
@@ -118,38 +230,13 @@
   margin-bottom: $spacing-unit / 2;
 }
 
-.contact-list,
 .social-media-list {
-  list-style: none;
-  margin-left: 0;
-}
-
-.footer-col-wrapper {
-  @include relative-font-size(0.9375);
-  color: $grey-color;
-  margin-left: -$spacing-unit / 2;
-  @extend %clearfix;
-}
-
-.footer-col {
-  float: left;
-  margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+  span {
+    padding: 6px;
+  }
+  a:hover {
+    color: red;
+  }
 }
 
 @include media-query($on-laptop) {
@@ -181,49 +268,13 @@
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
+  p{
+  font-size: 21px;
+  font-weight: normal;
+  font-family: Georgia;
+  line-height: 33px;
+  }
 }
-.name-input{
-  height: 20px;
-  padding: 12px;
-  border-radius: 30px;
-  background-color: #eee;
-  border: none;
-  width: 90%;
-}
-.email-input{
-  height: 20px;
-  padding: 12px;
-  border-radius: 30px;
-  background-color: #eee;
-  border: none;
-  width: 90%;
-}
-.user-message{
-  padding: 12px;
-  width: 90%;
-  background-color: #eee;
-  border: none;
-  border-radius: 6px;
-  padding: 12px;
-}
-.button{
-  text-align: center;
-}
-.submit-button{
-  margin-top: 18px;
-  border: 2px solid #34495e;
-  background-color: white;
-  padding: 6px;
-  border-radius: 30px;
-  width: 200px;
-  font-size: 18px;
-  cursor: pointer;
-  color: #34495e;
-}
-.hidden{
-  display: none;
-}
-
 
 .page-heading {
   @include relative-font-size(2);
@@ -249,8 +300,6 @@
 
 .post-link {
   display: block;
-  text-align: center;
-  @include relative-font-size(1.5);
 }
 
 
@@ -263,23 +312,15 @@
 }
 
 .post-title {
-  @include relative-font-size(1.625);
-  letter-spacing: 1px;
+  @include relative-font-size(2.4);
   line-height: 1;
-  text-align: center;
-  font-weight: 400;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(1.45);
+    @include relative-font-size(2.25);
   }
 }
 
-.h-card{
-  float: right;
-}
-
 .post-content {
-  line-height: 26px;
   margin-bottom: $spacing-unit;
 
   h2 {
@@ -306,3 +347,153 @@
     }
   }
 }
+.donate{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin-bottom: 15px;
+  #donate-email{
+    font-size: 18px;
+    border: none;
+    width: 190px;
+  }
+  #donate-button{
+    border: 1px solid #34495e;
+    margin: 2px;
+    padding:  1px 6px;;
+  }
+  #copy-email{
+    border: 1px solid #34495e;
+    margin: 1px;
+    padding: 1px 6px;
+    cursor: pointer;
+  }
+}
+.contact-form{
+  margin-top: 30px;
+}
+.name-input {
+  outline: none;
+  padding: 6px;
+  border: none;
+  width: 100%;
+  height: 20px;
+  background-color:  #34495e;
+  color: #fff;
+  font-size: 18px;
+  
+}
+
+.email-input {
+  outline: none;
+  background-color: #34495e;
+  padding: 6px;
+  width: 100%;
+  height: 20px;
+  margin: 8px auto;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+}
+
+.user-message {
+  background-color: #34495e;
+  border: none;
+  outline: none;
+  padding: 6px;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+
+}
+
+.button {
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.submit-button {
+  background-color: #f50057;
+  border: 1px solid #f50057;
+  font-size: 20px;
+  max-width: 140px;
+  min-width: 180px;
+  padding: 6px 3px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.hidden {
+  display: none; 
+}
+
+.share-buttons{
+  line-height: 40px;
+  a{
+    padding: 2px 12px;
+    color: #fff;
+  }
+  a:hover{
+  opacity: 0.7;
+  }
+  .twitter-share{
+    background-color: #38A1F3;
+  }
+  .facebook-share{
+    background-color: #3B5998;
+  }
+  .linkedin-share{
+    background-color: #0077B5;
+  }
+  .reddit-share{
+    background-color: #ff4500;
+  }
+  .pinterest-share{
+    background-color: #c8232c;
+    margin-left: 6px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .page-content p{
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .intro{
+    color: white;
+    text-align: center;
+    background: linear-gradient(
+      rgba(20, 20, 20, 0.6),
+      rgba(20, 20, 20, 0.6)),
+      url("/static/fitness-dopamine-small.jpg");
+    p{
+      font-size: 18px;
+      line-height: 30px;
+    }
+    .promo-link{
+      max-width: 160px;
+      padding: 4px 2px;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .post-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  } 
+
+  .post-item{
+    max-width: 40%;
+  }
+  .post-image{
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+

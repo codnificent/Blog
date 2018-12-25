@@ -8,18 +8,39 @@ layout: default
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if site.author -%}
-         <span class="p-author h-card" itemprop="name">By <a href="https://github.com/codnificent">{{ site.author }}</a></span>
-      {%- endif -%}</p>
+        {{ page.date | date: date_format }}•
+      </time> 
+      <span style="float: right;">
+        {% assign words = content | number_of_words %}
+        {% if words < 360 %}
+          1 minute
+        {% else %}
+          {{words | divided_by: 180 }} minutes
+        {% endif %} read•
+      </span>
+    </p>
+     
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
+    <img src="{{ page.thumbnail | prepend: site.baseurl }}" alt="{{ page.title }}" style="margin-bottom: 26px;">
     {{ content }}
+     {%- if page.author -%}
+        <span class="h-card" style="float: right;" itemprop="name">...shared with ❤ by <a href="https://facebook.com/aguchibe">{{ page.author }}</a></span>
+      {%- endif -%}
+      <br>
   </div>
-
+  {%- include share.html -%}
   {%- include disqus_comments.html -%}
-
+  <br>
+<!--
+  <div style="border: 2px dashed #f50057; padding: 10px 0 0 10px;">
+    <p>If  you love the calm environment here and this post has helped you, consider offering your support. This helps me to push out even more better contents :) Thank you.</p>
+    <div class="donate">
+      <input type="text" id="donate-email" value="codnificent@gmail.com" readonly="true"><span id ="copy-email" onclick="copyNow()">Copy email</span> <span id="donate-button"><a href="https://www.paypal.com/en/webapps/mpp/send-money-online" target="_blank">❤<b>Support</b></a></span>
+    </div>
+  </div>
+-->
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+<script src="{{ base.url | prepend: site.url }}/assets/script.js"></script>

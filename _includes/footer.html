@@ -1,37 +1,23 @@
-<footer class="site-footer h-card">
+<footer class="site-footer h-card"  style="text-align: center; background-color: #f50057; " >
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            <h2 class="footer-heading">{{ site.title | escape }}</h2>
-            {%- if site.author -%}
-            <a href="https://github.com/codnificent">{{ site.author | escape }}</a>
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="https:mordernweb.com/contact">{{ site.email }}</a></li>
-            {%- endif -%}
-            {%- if site.number -%}
-            <li>{{ site.number }}</li>
-            {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
+  <div class="wrapper" style="background-color: #fff; height: 100%; width: auto; box-shadow: 5px 5px 25px 0 rgba(0,0,0,.7);">   
+    <div class="newsletter-right">
+      <p style="padding-top: 12px;"><b>Get free contents directly into your inbox</b></p>
+       <form name="newsletter" method="POST" netlify>
+         <input type="text" id="email" name="email" placeholder="Enter your email.." required="true" class="newsletter-email">
+         <br>
+         <button type="submit" class="newsletter-submit" style="margin-bottom: 8px;">Submit Email</button>
+       </form>
+    </div>
+    <br>
+     <div class="sit-details-left">
+      <div class="social-icons">
+        <p><b>Get in touch with me through &rarr;<b></p>
         {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
       </div>
     </div>
 
   </div>
-
+  <div style="margin-top: 34px;"><a href="/" style="color: #fff; text-decoration: underline;"><b>&copy;2019 {{ site.title | escape }}</b></a></div>
 </footer>

@@ -3,6 +3,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 # This line should *not* be indented
 publish_mode: editorial_workflow
+folder: "_posts"
 media_folder: "static/uploads" # Media files will be stored in the repo under images/uploads
 collections:
   - name: "post" # Used in routes, e.g., /admin/collections/blog
@@ -13,6 +14,17 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Category", name: "categories", widget: "text"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "clothes" # Used in routes, e.g., /admin/collections/blog
+    label: "Clothes" # Used in the UI
+    folder: "_clothes" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Price", name: "price", widget: "string"}
+      - {label: "Discount", name: "discount", widget: "string"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}

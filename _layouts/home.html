@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
@@ -10,29 +9,48 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h3 class="post-list-heading">{{ page.list_title | default: "Blog Posts" }}</h3>
+   
+    <div style="border: 1px dashed #f50057; padding: 10px 0 0 10px; margin-bottom: 14px;">
+      <h6 style="text-align: center;">
+      Get free quality contents in your inbox as soon as they drop in...
+      </h6>
+
+      <form name="newsletter" method="POST" netlify class="newsletter">
+        <input type="text" id="email" name="email" placeholder="Enter your email.." required="true" class="  newsletter-email">
+        <br>
+        <button type="submit" class="newsletter-submit">Submit Email</button>
+      </form>
+    </div>
+
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <h4>
+      <li class="post-item">
+        <a class="post-link" href="{{ post.url | relative_url }}">
+             <img class="post-image" src="{{ post.thumbnail | prepend: site.baseurl }}" alt="{{ post.title }}"/>
+        </a>
+  
+        <span class="post-heading">
           <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
+            <b>{{ post.title | escape }}</b>
           </a>
-         
-          <p>{{ post.excerpt }}</p>
-          {%- if site.author -%}
-             <span class="p-author h-card" itemprop="name">By <a href="https://github.com/codnificent">{{ site.author }}</a></span>
-          {%- endif -%}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-        </h4>
+        </span>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+<!--
+        {%- if post.author -%}
+          <span class=" post-meta p-author h-card"style="float: right;">By <a href="https://facebook.com/aguchibe">{{ post.author }}</span>
+        {%- endif -%}
+-->
+        <!--
+        {%- if site.show_excerpts -%}
+        <p class="homepage-p">
+          {{  post.content | strip_html | truncatewords:20}}
+        </p>
+        {%- endif -%}
+        -->
       </li>
       {%- endfor -%}
     </ul>
-
-    <!--
-      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-    -->
   {%- endif -%}
 
 </div>

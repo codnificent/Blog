@@ -3,11 +3,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="acJ1vgpY1SgaGUpTNwo9inblQMLtDVu2I1g9yf_6aFk" />
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   {%- seo -%}
   <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126904501-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126904501-1');
+  </script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   {%- feed_meta -%}
-  {%- include google-analytics.html -%}
 </head>

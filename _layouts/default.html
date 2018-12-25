@@ -6,6 +6,10 @@
   <body>
 
     {%- include header.html -%}
+    {% if page.url == "/" %}
+       {%- include banner.html -%}
+  
+    {% endif %}
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
