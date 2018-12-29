@@ -1,12 +1,12 @@
 <div class="share-buttons">
-    Let others know about this through &rarr; 
-    <a class="pinterest-share" href="http://pinterest.com/pin/create/button/?url={{ site.url }}&description={{ page.title }}" rel="nofollow" target="_blank" title="Pin on Pinterest">{%- include pinterest.svg -%}Pin</a>
+    <p>Let others know about this through &rarr;</p>
+    <a class="pinterest-share" href="http://pinterest.com/pin/create/button/?url={{ site.url }}&description={{ page.title }}" rel="nofollow" target="_blank" title="Pin on Pinterest">{%- include pinterest.svg -%}</a>
 
-    <a class="twitter-share" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">{%- include twitter.svg -%}Tweet</a>
+    <a class="twitter-share" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">{%- include twitter.svg -%}</a>
 
-    <a class="facebook-share" href="https://facebook.com/sharer.php?u={{ site.url }}&p[title]={{ page.title }}" rel="nofollow" target="_blank" title="Share on Facebook">{%- include facebook.svg -%}Share</a>
+    <a class="facebook-share" href="https://facebook.com/sharer.php?u={{ site.url }}&p[title]={{ page.title }}" rel="nofollow" target="_blank" title="Share on Facebook">{%- include facebook.svg -%}</a>
 
-    <a class="linkedin-share" href="https://linkedin.com/shareArticle?mini=true&url={{ site.url }}&title={{ page.title }}&summary={{  post.content | strip_html | truncatewords:20}}" rel="nofollow" target="_blank" title="Share on LinkedIn">{%- include linkedin.svg -%}Share</a>
+    <a class="linkedin-share" href="https://linkedin.com/shareArticle?mini=true&url={{ site.url }}&title={{ page.title }}&summary={{  post.content | strip_html | truncatewords:20}}" rel="nofollow" target="_blank" title="Share on LinkedIn">{%- include linkedin.svg -%}</a>
 
     <a class="reddit-share" href="https://reddit.com/submit?url={{ site.url }}&title={{ page.title }}" rel="nofollow" target="_blank" title="Share on Reddit">{%- include reddit.svg -%}</a>
 </div>
